@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cute Interactive Gift</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="reel.css">
+</head>
+
+<body>
+    <div class="scene">
+        <div class="floating-paw">🐾</div>
+        <div class="card">
+            <div class="hero">
+                <h1 class="big-title">I made something special for u<br>do u wanna see it?</h1>
+                <img class="frontpage-img" src="https://media1.tenor.com/m/MKkJWYigjycAAAAC/cute-cat-cat-cute.gif"
+                    alt="a close up of a cat 's face with a smiley face" fetchpriority="high">
+                <div class="characters" aria-hidden="true">
+                    <!-- simple cute characters svg -->
+                    <!-- left white character -->
+                    <g transform="translate(40,20)">
+                        <ellipse cx="40" cy="50" rx="36" ry="38" fill="#fff" stroke="#e6dfe0" />
+                        <circle cx="26" cy="36" r="5" fill="#111" />
+                        <circle cx="54" cy="36" r="5" fill="#111" />
+                        <path d="M30 58 q10 8 20 0" stroke="#f2c1c8" stroke-width="2" fill="none"
+                            stroke-linecap="round" />
+                        <rect x="4" y="92" width="72" height="18" rx="6" fill="#f6e8d9" />
+                    </g>
+                    <!-- right brown character -->
+                    <g transform="translate(150,20)">
+                        <ellipse cx="40" cy="50" rx="36" ry="38" fill="#d9bfae" stroke="#e0c9bd" />
+                        <circle cx="26" cy="36" r="5" fill="#2b1b18" />
+                        <circle cx="54" cy="36" r="5" fill="#2b1b18" />
+                        <path d="M30 58 q10 10 20 0" stroke="#c47f88" stroke-width="2" fill="none"
+                            stroke-linecap="round" />
+                        <rect x="92" y="72" width="14" height="26" rx="4" fill="#dbeef6" transform="rotate(30 99 85)" />
+                    </g>
+                    </svg>
+                </div>
+
+                <div class="choices">
+                    <button id="yes" class="btn positive"><span class="label">YES</span></button>
+                    <button id="no" class="btn negative"><span class="label">NO</span></button>
+                </div>
+            </div>
+
+            <div id="response" class="response hidden"></div>
+
+            <div id="extras" class="extras hidden">
+                <button id="openLetter" class="btn letter">Open Letter 💌</button>
+                <div class="photostrip">
+                    <div class="photo">📸</div>
+                    <div class="photo">📸</div>
+                    <div class="photo">📸</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal" class="modal hidden">
+            <div class="modal-card">
+                <button id="closeModal" class="close">✕</button>
+                <h2 class="modal-title">Welcome to the special page!</h2>
+                <p class="modal-text">This little page is made with love — add your own photos and messages.</p>
+                <button id="ok" class="btn positive">Yay! 💖</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="reel.js"></script>
+</body>
+
+</html>

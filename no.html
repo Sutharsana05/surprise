@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>How dare you 😾</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="reel.css">
+</head>
+<body>
+  <div class="scene">
+    <div class="card">
+      <h1 class="title">Reallyyyyy </h1>
+       <div class="gif-wrap">
+         <img class="no-gif" src="https://media1.tenor.com/m/OroVCOXbuUUAAAAd/sadhamstergirl.gif" alt="a hamster with a pink bow on its head" fetchpriority="high">
+       </div>
+      <div class="extras">
+        <button id="back" class="btn">Back</button>
+      </div>
+
+      <div id="mini" class="response hidden">Okay, truce? 🤝</div>
+    </div>
+  </div>
+
+    <script>
+    document.getElementById('back').addEventListener('click', ()=>{ location.href='index.html'; });
+    const apologizeBtn = document.getElementById('apologize');
+    if(apologizeBtn){
+      apologizeBtn.addEventListener('click', ()=>{
+        const mini = document.getElementById('mini');
+        mini.classList.remove('hidden'); mini.style.opacity=1; mini.style.transform='translateY(0)';
+        // small paw prints
+        for(let i=0;i<8;i++){
+          const p = document.createElement('div'); p.textContent='🐾';
+          p.style.position='fixed'; p.style.left=(40+Math.random()*20)+'%'; p.style.top=(40+Math.random()*20)+'%';
+          p.style.fontSize=(12+Math.random()*18)+'px'; p.style.pointerEvents='none'; document.body.appendChild(p);
+          const tx=(Math.random()*160-80), ty=-(10+Math.random()*120);
+          p.animate([{transform:'translate(0,0) scale(1)'},{transform:`translate(${tx}px,${ty}px) scale(.6)`}],{duration:900+Math.random()*700,easing:'ease-out'});
+          setTimeout(()=>p.remove(),1500);
+        }
+      });
+    }
+  </script>
+</body>
+</html>
